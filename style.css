@@ -15,7 +15,7 @@
 body {
   background-color: hsl(0, 0%, 98%);
   font-family: "Epilogue", sans-serif;
-  max-width: 1440px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -66,15 +66,15 @@ a {
 
 .menu-item {
   margin: 0 1vh;
-  padding: 0 3vw;
+  padding: 1vh 4vw;
 }
 
 .menu-item a {
   color: hsl(0, 0%, 41%);
 }
 
-.features ::after,
-.company ::after {
+.link-features::after,
+.link-company::after {
   content: url(./images/icon-arrow-down.svg);
 }
 
@@ -105,6 +105,7 @@ a {
 }
 
 .login > a,
+.login,
 .register {
   text-align: center;
   color: hsl(0, 0%, 41%);
@@ -249,6 +250,15 @@ main {
     transition: 0.3s;
   }
 
+  .features:hover .menu-features,
+  .company:hover .menu-company {
+    display: block;
+    position: relative;
+    top: 2vh;
+    left: 1vw;
+    text-align: left;
+  }
+
   .login {
     text-align: right;
     width: 25vw;
@@ -284,6 +294,7 @@ main {
     align-items: center;
     padding: 0 6vw;
     height: 80vh;
+    width: 100vw;
   }
 
   .image {
@@ -298,6 +309,7 @@ main {
     text-align: justify;
     flex: 0;
     height: 100%;
+    width: 100%;
   }
 
   .conteudo h1 {
@@ -324,5 +336,27 @@ main {
   .attribution > a:hover {
     color: hsl(0, 0%, 8%);
     font-weight: bolder;
+  }
+}
+
+@media (min-width: 2100px) {
+  .logo {
+    transform: scale(1.2);
+  }
+
+  .menu {
+    font-size: 1.2em;
+  }
+
+  .conteudo > h1 {
+    font-size: 5em;
+  }
+
+  .conteudo > p {
+    font-size: 1.3em;
+  }
+
+  .buttonClass {
+    font-size: 1em;
   }
 }
